@@ -1,0 +1,156 @@
+/* Styles de base */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p.lead {
+    color: #666;
+    font-size: 1.2em;
+}
+
+/* Cartes */
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.btn-light {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-light:hover {
+    background-color: #e2e6ea;
+    color: #000;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Listes */
+.list-group-item {
+    border: none;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.list-group-item:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ombres */
+.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+/* Graphiques */
+#salesChart {
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* Styles spécifiques */
+.card-primary {
+    background: linear-gradient(45deg, #2196F3, #21CBF3);
+}
+
+.card-success {
+    background: linear-gradient(45deg, #66BB6A, #43A047);
+}
+
+.card-warning {
+    background: linear-gradient(45deg, #FFA726, #FB8C00);
+}
+
+.card-danger {
+    background: linear-gradient(45deg, #EF5350, #E53935);
+}
+
+.card-body::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.5s;
+    transform: rotate(45deg);
+}
+
+.card-body:hover::before {
+    top: -40%;
+    left: -40%;
+    width: 180%;
+    height: 180%;
+}
+
+/* Transition et transformation */
+.card:hover .card-title {
+    transform: translateY(-5px);
+}
+
+.card:hover .card-text {
+    transform: translateY(-5px);
+}
+
+.card-title, .card-text {
+    transition: transform 0.3s ease;
+}
